@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class Calculator extends Component {
+class CalcDisplay extends Component {
     render() {
         return (
             <div>
-                I'm the calculator
+                I'm the Display!
             </div>
         );
     }
 }
 
-export default Calculator;
+export default CalcDisplay;

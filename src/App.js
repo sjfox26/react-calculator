@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Calculator from './components/Calculator';
+import Calculator from './containers/Calculator';
 
 
 class App extends Component {
   render() {
     return (
       <div>
-        Hello world!!
+        App Container
         <Calculator />
       </div>
     );
