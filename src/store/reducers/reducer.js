@@ -8,7 +8,7 @@ const reducer = ( state = initialState, action ) => {
     switch ( action.type ) {
         case actionTypes.INCREMENT:
             const newState = Object.assign({}, state);
-            newState.displayValue = state.displayValue + 1;
+            newState.displayValue = state.displayValue + action.payload;
             return newState;
     }
     return state;

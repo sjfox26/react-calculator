@@ -24,7 +24,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onCalcButtonClicked: () => dispatch({type: actionTypes.INCREMENT})
+        onCalcButtonClicked: (v) => dispatch({type: actionTypes.INCREMENT, payload: v})
     }
 };
 
