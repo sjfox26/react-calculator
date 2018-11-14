@@ -1,16 +1,31 @@
 import React, { Component } from 'react';
 import CalcDisplay from "../components/CalcDisplay";
 import CalcButtons from "../components/CalcButtons";
+import { connect } from 'react-redux';
+import * as actionTypes from '../store/actions/index';
 
 class Calculator extends Component {
+
     render() {
         return (
             <div>
-                <CalcDisplay/>
-                <CalcButtons/>
+                <CalcDisplay value={this.props.val}/>
+                <CalcButtons clicked={this.props.onCalcButtonClicked}/>
             </div>
         );
     }
 }
 
-export default Calculator;
+const mapStateToProps = state => {
+    return {
+        val: state.displayValue,
+    }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onCalcButtonClicked: () => dispatch({type: actionTypes.INCREMENT})
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Calculator);

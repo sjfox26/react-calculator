@@ -7,7 +7,7 @@ class CalcButtons extends Component {
             <div>
                 <CalcButton/>
                 <CalcButton/>
-                <CalcButton/>
+                <CalcButton clicked={this.props.clicked}/>
             </div>
         );
     }

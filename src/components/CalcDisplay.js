@@ -4,7 +4,7 @@ class CalcDisplay extends Component {
     render() {
         return (
             <div>
-                I'm the Display!
+                I'm the Display! {this.props.value}
             </div>
         );
     }
