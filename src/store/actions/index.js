@@ -1,1 +1,1 @@
-export const INCREMENT = 'INCREMENT';
+export const TO_DISPLAY = 'TO_DISPLAY';

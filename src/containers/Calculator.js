@@ -11,6 +11,9 @@ class Calculator extends Component {
             <div>
                 <CalcDisplay value={this.props.val}/>
                 <CalcButtons clicked={this.props.onCalcButtonClicked}/>
+                <hr/>
+                <p>First Number: {this.props.firstNum}</p>
+                <p>Operation: {this.props.op}</p>
             </div>
         );
     }
@@ -19,12 +22,14 @@ class Calculator extends Component {
 const mapStateToProps = state => {
     return {
         val: state.displayValue,
+        firstNum: state.firstNumber,
+        op: state.operation
     }
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        onCalcButtonClicked: (v) => dispatch({type: actionTypes.INCREMENT, payload: v})
+        onCalcButtonClicked: (v) => dispatch({type: actionTypes.TO_DISPLAY, payload: v})
     }
 };
 
