@@ -47,7 +47,11 @@ const reducer = ( state = initialState, action ) => {
             const newState = Object.assign({}, state);
 
             //first number typed replaces 0 on display
-            if ( state.displayValue === "0" && isNumber(action.payload) ){
+            if (action.payload === "C") {
+                newState.displayValue = "0";
+                newState.operation = '';
+                newState.firstNumber = '';
+            } else if ( state.displayValue === "0" && isNumber(action.payload) ){
                 newState.displayValue = action.payload;
                 //operation typed before number is ignored
             } else if ( state.displayValue === "0" && !isNumber(action.payload) ) {
