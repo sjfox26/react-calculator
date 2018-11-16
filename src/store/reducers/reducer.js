@@ -17,7 +17,7 @@ function calculateAnswer(firstNum, op, secondNum) {
             return parseFloat(firstNum) + parseFloat(secondNum);
         case "-":
             return parseFloat(firstNum) - parseFloat(secondNum);
-        case "*":
+        case "x":
             return parseFloat(firstNum) * parseFloat(secondNum);
         case "/":
             return parseFloat(firstNum) / parseFloat(secondNum);
@@ -55,6 +55,7 @@ function inverseOrPercentage(op, displayVal) {
 //add % and logic
 //add styles
 //refactor possibly
+//add proptypes
 
 const reducer = ( state = initialState, action ) => {
     switch ( action.type ) {

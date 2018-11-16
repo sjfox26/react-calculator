@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './CalcButton.css';
 
 class CalcButton extends Component {
     handleClick = () => {
@@ -6,10 +7,17 @@ class CalcButton extends Component {
     }
 
     render() {
+        const className = [
+            "calc-button-component",
+            this.props.orange ? "orange" : "",
+            this.props.wide ? "wide" : "",
+        ];
+
         return (
-            <div onClick={this.handleClick}>
-                Button {this.props.val}
+            <div className={className.join(" ").trim()}>
+                <button onClick={this.handleClick}>{this.props.val}</button>
             </div>
+
         );
     }
 }

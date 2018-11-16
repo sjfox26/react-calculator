@@ -3,17 +3,15 @@ import CalcDisplay from "../components/CalcDisplay";
 import CalcButtons from "../components/CalcButtons";
 import { connect } from 'react-redux';
 import * as actionTypes from '../store/actions/index';
+import './Calculator.css';
 
 class Calculator extends Component {
 
     render() {
         return (
-            <div>
+            <div className="calculator-component">
                 <CalcDisplay value={this.props.val}/>
                 <CalcButtons clicked={this.props.onCalcButtonClicked}/>
-                <hr/>
-                <p>First Number: {this.props.firstNum}</p>
-                <p>Operation: {this.props.op}</p>
             </div>
         );
     }

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import './CalcDisplay.css';
 
 class CalcDisplay extends Component {
     render() {
         return (
-            <div>
-                I'm the Display! {this.props.value}
+            <div className="display-component">
+                <div>{this.props.value}</div>
             </div>
         );
     }
