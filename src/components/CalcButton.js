@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './CalcButton.css';
+
 
 class CalcButton extends Component {
     handleClick = () => {
@@ -21,5 +23,12 @@ class CalcButton extends Component {
         );
     }
 }
+
+CalcButton.propTypes = {
+    clicked: PropTypes.func,
+    val: PropTypes.string,
+    orange: PropTypes.bool,
+    wide: PropTypes.bool
+};
 
 export default CalcButton;

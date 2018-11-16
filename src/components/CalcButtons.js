@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import CalcButton from "./CalcButton";
 import './CalcButtons.css';
 
@@ -39,5 +41,9 @@ class CalcButtons extends Component {
         );
     }
 }
+
+CalcButtons.propTypes = {
+  clicked: PropTypes.func
+};
 
 export default CalcButtons;

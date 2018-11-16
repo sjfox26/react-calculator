@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import './CalcDisplay.css';
 
 class CalcDisplay extends Component {
@@ -10,5 +12,9 @@ class CalcDisplay extends Component {
         );
     }
 }
+
+CalcDisplay.propTypes = {
+  value: PropTypes.string
+};
 
 export default CalcDisplay;

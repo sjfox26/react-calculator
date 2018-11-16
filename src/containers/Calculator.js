@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import CalcDisplay from "../components/CalcDisplay";
 import CalcButtons from "../components/CalcButtons";
-import { connect } from 'react-redux';
 import * as actionTypes from '../store/actions/index';
 import './Calculator.css';
 
