@@ -20,7 +20,10 @@ class CalcButtons extends Component {
                 <CalcButton clicked={this.props.clicked} val={"-"}/>
                 <CalcButton clicked={this.props.clicked} val={"/"}/>
                 <CalcButton clicked={this.props.clicked} val={"*"}/>
+                <CalcButton clicked={this.props.clicked} val={"."}/>
                 <CalcButton clicked={this.props.clicked} val={"="}/>
+                <CalcButton clicked={this.props.clicked} val={"+/-"}/>
+                <CalcButton clicked={this.props.clicked} val={"%"}/>
             </div>
         );
     }
