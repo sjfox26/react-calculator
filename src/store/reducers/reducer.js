@@ -70,6 +70,7 @@ const reducer = ( state = initialState, action ) => {
                 //handles +/- and % buttons
             } else if ( action.payload === "+/-" || action.payload === "%") {
                 if (state.displayValue === "0") {
+                    //ignore if 0
                     return newState;
                 } else {
                     let invOrPer = inverseOrPercentage(action.payload, state.displayValue);
@@ -77,7 +78,7 @@ const reducer = ( state = initialState, action ) => {
                 } //first number typed replaces 0 on display
             } else if ( state.displayValue === "0" && isNumber(action.payload) ){
                 newState.displayValue = action.payload;
-                //operation typed before number is ignored
+                //ignore if operation is typed before number
             } else if (action.payload === ".") {
                     // ignore "." if the display value already has one
                     if ( state.displayValue.includes(".") && state.displayValue !== state.firstNumber ) {
@@ -88,6 +89,7 @@ const reducer = ( state = initialState, action ) => {
                         newState.displayValue = newState.displayValue + ".";
                     }
             } else if ( state.displayValue === "0" && !isNumber(action.payload) ) {
+                //ignore operations if pressed first
                 return newState;
                 //operation is typed while another operation already present...
             } else if ( state.operation && !isNumber(action.payload) ) {
