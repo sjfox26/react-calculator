@@ -21,8 +21,6 @@ class Calculator extends Component {
 const mapStateToProps = state => {
     return {
         val: state.displayValue,
-        firstNum: state.firstNumber,
-        op: state.operation
     }
 };
 
