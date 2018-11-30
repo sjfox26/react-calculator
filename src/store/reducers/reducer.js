@@ -52,10 +52,7 @@ function inverseOrPercentage(op, displayVal) {
     //Save the answer as firstNumber
 //add    +/-   .
 
-//add % and logic
-//add styles
-//refactor possibly
-//add proptypes
+
 
 const reducer = ( state = initialState, action ) => {
     switch ( action.type ) {
