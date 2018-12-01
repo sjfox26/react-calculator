@@ -123,8 +123,10 @@ const reducer = ( state = initialState, action ) => {
                 newState.displayValue = state.displayValue + action.payload;
             }
             return newState;
+
+        default:
+            return state;
     }
-    return state;
 };
 
 export default reducer;
